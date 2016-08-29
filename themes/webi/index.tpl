@@ -1,451 +1,139 @@
 {include file="$header_tpl"}
 
-<!-- start the slider -->
+<!-- include du slider -->
+{include file="$slider_tpl"}
 
-<div class="" style="position: relative; padding:0px; margin:0px; background-color:#fff;">
-     <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; visibility: hidden;">
-          <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-               <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-               <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-          </div>
-          <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
-               <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/red.jpg" />
-                    <div style="position: absolute; top: 30px; left: 30px; width: 480px; height: 120px; font-size: 50px; color: #ffffff; line-height: 60px;">TOUCH SWIPE SLIDER</div>
-                    <div style="position: absolute; top: 300px; left: 30px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">Build your slider with anything, includes image, content, toto, html, photo, picture</div>
-                    <div data-u="caption" data-t="0" style="position: absolute; top: 100px; left: 600px; width: 445px; height: 300px;">
-                         <img src="img/c-phone.png" style="position: absolute; top: 0px; left: 0px; width: 445px; height: 300px;" />
-                         <img src="img/c-jssor-slider.png" data-u="caption" data-t="1" style="position: absolute; top: 70px; left: 130px; width: 102px; height: 78px;" />
-                         <img src="img/c-text.png" data-u="caption" data-t="2" style="position: absolute; top: 153px; left: 163px; width: 80px; height: 53px;" />
-                         <img src="img/c-fruit.png" data-u="caption" data-t="3" style="position: absolute; top: 60px; left: 220px; width: 140px; height: 90px;" />
-                         <img src="img/c-navigator.png" data-u="caption" data-t="4" style="position: absolute; top: -123px; left: 121px; width: 200px; height: 155px;" />
-                    </div>
-                    <div data-u="caption" data-t="5" style="position: absolute; top: 120px; left: 650px; width: 470px; height: 220px;">
-                         <img src="img/c-phone-horizontal.png" style="position: absolute; top: 0px; left: 0px; width: 470px; height: 220px;" />
-                         <div style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px; overflow: hidden;">
-                              <img src="img/c-slide-1.jpg" data-u="caption" data-t="6" style="position: absolute; top: 0px; left: 0px; width: 379px; height: 213px;" />
-                         <!-- <img src="img/c-slide-3.jpg" data-u="caption" data-t="7" style="position: absolute; top: 0px; left: 379px; width: 379px; height: 213px;" /> -->
-                              <img src="img/c-slide-4.jpg" data-u="caption" data-t="7" style="position: absolute; top: 0px; left: 379px; width: 379px; height: 213px;" />
+
+<!-- start of main content -->
+
+<!-- start of tuto cosplay content -->
+
+<div class="pdt10 pdb10"></div>
+<div class="row">
+	<div class="small-12 columns">
+		<div class="txtal">
+			<h1><span class="SouligneOrange">{$texte[7]}</span></h1>
+		</div>
+	</div>
+</div>
+<div class="pdt20 pdb20"></div>
+
+<div class="row">
+     {foreach from=$tuto_txt key=i item=k}
+          <div class="small-12 medium-6 large-3 columns">
+               <a href="{$master_url}/tutoriel-ecrit/{$k['id_tuto']}">
+                    <div class="tuto_txt_box resiseImg" style="background: url({$k['image']}) no-repeat center center">
+                         <div class="text_tuto" id="myid-{$i}">
+                              <div class="trais mgt5 mgb5"></div>
+                              <div class="txtac mgt10 mgb10">{$k['titre']}</div>
+                              <div class="hide_preview">{$k['description']|truncate:150:"...":false}</div>
                          </div>
-                         <img src="img/c-navigator-horizontal.png" style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px;" />
-                         <img src="img/c-finger-pointing.png" data-u="caption" data-t="8" style="position: absolute; top: 740px; left: 1600px; width: 257px; height: 300px;" />
                     </div>
-               </div>
-               <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/purple.jpg" />
-               </div>
-               <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/blue.jpg" />
-               </div>
-               <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/fondManga.jpg" />
-               </div>
-          </div>
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
-            <!-- bullet navigator item prototype -->
-            <div data-u="prototype" style="width:16px;height:16px;"></div>
-        </div>
-        <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
-        <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
-    </div> 
+               </a>
+               <div class="show-for-medium-down pdt20 pdb20"></div>
+           </div>
+     {/foreach}
 </div>
 
-<!-- end od slider -->
-
-<!-- start of tutoriel / news -->
-
+<div class="mgt10 mgb10"></div>
 <div class="row">
-     <div class="small-12 medium-9 columns">
-          <div class="txtal mgt20 mgb20">{$texte[7]}</div>
-     </div>
+	<div class="small-12 columns">
+		<div class="txtal">
+			<h1><span class="SouligneOrange">{$texte[9]}</span></h1>
+		</div>
+	</div>
 </div>
-
-<!-- ligne tuto cosplay -->
-
-<div class="row">
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">   
-               <div class="tuto_img"><img src="{$tuto_txt[0]['img_pres']}" alt="image tuto 1">
-               <div class="text_tuto">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$tuto_txt[0]['titre']}</div>
-                    <div class="hide_preview">{$tuto_txt[0]['intro']}</div>
-               </div>
-               </div>
-          </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$tuto_txt[1]['img_pres']}" alt="image tuto 1"></div>
-               <div class="text_tuto">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$tuto_txt[1]['titre']}</div>
-                    <div class="hide_preview">{$tuto_txt[1]['intro']}</div>
-               </div>
-          </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$tuto_txt[2]['img_pres']}" alt="image tuto 1"></div>
-               <div class="text_tuto">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$tuto_txt[2]['titre']}</div>
-                    <div class="hide_preview">{$tuto_txt[2]['intro']}</div>
-               </div>
-          </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$tuto_txt[3]['img_pres']}" alt="image tuto 1"></div>
-               <div class="text_tuto">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$tuto_txt[3]['titre']}</div>
-                    <div class="hide_preview">{$tuto_txt[3]['intro']}</div>
-               </div>
-          </div>
-     </div>
-</div>
-
-<div class="row">
-     <div class="small-12 columns">
-          <div class="txtal mgt20 mgb20">{$texte[9]}</div>
-     </div>
-</div>
-
+<div class="pdt20 pdb20"></div>
 <!-- ligne vente cosplay -->
 
-<div class="row">
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">   
-               <div class="tuto_img"><img src="{$vente_cos[0]['image']}" alt="image tuto 1"></div>
-               <div class="vente_index">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$vente_cos[0]['titre']}</div>
-               </div>
-          </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$vente_cos[1]['image']}" alt="image tuto 1"></div>
-               <div class="vente_index">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$vente_cos[1]['titre']}</div>
-               </div>
-          </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$vente_cos[2]['image']}" alt="image tuto 1"></div>
-               <div class="vente_index">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$vente_cos[2]['titre']}</div>
-               </div>
-          </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$vente_cos[3]['image']}" alt="image tuto 1"></div>
-               <div class="vente_index">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$vente_cos[3]['titre']}</div>
-               </div>
-          </div>
-     </div>
-</div>
 
 <div class="row">
-     <div class="small-12 columns">
-          <div class="txtal mgt20 mgb20">{$texte[11]}</div>  
-     </div>
+     {foreach from=$vente_cos key=i item=k}
+          <div class="small-12 medium-6 large-3 columns">
+               <div class="tuto_txt_box resiseImg" style="background: url({$k['image']}) no-repeat center center">
+                    <div class="vente_index">
+                         <div class="trais mgt5 mgb5"></div>
+                         <div class="txtac mgt10 mgb10">{$k['titre']}</div>
+                    </div>
+               </div>
+               <div class="show-for-medium-down pdt20 pdb20"></div> 
+          </div>
+     {/foreach}
 </div>
 
-
+<div class="mgt10 mgb10"></div>
+<div class="row">
+	<div class="small-12 columns">
+		<div class="txtal">
+			<h1><span class="SouligneOrange">{$texte[11]}</span></h1>
+		</div>
+	</div>
+</div>
+<div class="pdt20 pdb20"></div>
 <!-- ligne location cosplay -->
 
 <div class="row">
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">   
-               <div class="tuto_img"><img src="{$loca_cos[0]['image']}" alt="image tuto 1"></div>
-               <div class="vente_index">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$loca_cos[0]['titre']}</div>
+     {foreach from=$loca_cos key=i item=k}
+          <div class="small-12 medium-6 large-3 columns">
+               <div class="tuto_txt_box resiseImg" style="background: url({$k['image']}) no-repeat center center">
+                    <div class="vente_index">
+                         <div class="trais mgt5 mgb5"></div>
+                         <div class="txtac mgt10 mgb10">{$k['titre']}</div>
+                    </div>
                </div>
+               <div class="show-for-medium-down pdt20 pdb20"></div>
           </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$loca_cos[1]['image']}" alt="image tuto 1"></div>
-               <div class="vente_index">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$loca_cos[1]['titre']}</div>
-               </div>
-          </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$loca_cos[2]['image']}" alt="image tuto 1"></div>
-               <div class="vente_index">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$loca_cos[2]['titre']}</div>
-               </div>
-          </div>
-     </div>
-     <div class="small-12 large-3 columns">
-          <div class="tuto_txt_box">
-               <div class="tuto_img"><img src="{$loca_cos[3]['image']}" alt="image tuto 1"></div>
-               <div class="vente_index">
-                    <div class="trais mgt5 mgb5"></div>
-                    <div class="txtac mgt10 mgb10">{$loca_cos[3]['titre']}</div>
-               </div>
-          </div>
-     </div>
+     {/foreach}
 </div>
 
-<div class="row">
+<div class="row" data-equalizer>
      <div class="small-12 medium-6 columns">
-          <!-- evenements -->
-          <div class="txtal mgt20 mgb20">{$texte[10]}</div>  
-     </div>
-     <div class="small-12 medium-6 columns">
-          <!-- news -->
-          <div class="txtal mgt20 mgb20">{$texte[8]}</div>  
-     </div>
-</div>
-
-<div class="row">
-     <div class="small-12 medium-6 columns">
-          <div class="EventBox">
+          <div class="txtal mgt20 mgb20"><h1><span class="SouligneOrange">{$texte[10]}</span></h1></div>
+          <div class="EventBox" data-equalizer-watch>
                {foreach from=$event key=i item=k}
-                    <div class="row">
-                         <div class="small-12 large-6 columns">
-                              <div class="fs18px mgr5 mgl5 pdb8 pdt8 txtal lh20 pneutre c1">{$k['date']}</div>
+                    <a href="{$master_url}/evenement/{$k['event_id']}">
+                         <div class="row">
+                              <div class="small-12 large-6 columns">
+                                   <div class="fs18px mgr5 mgl15 pdb8 pdt8 txtal lh20 pneutre c1">{$k['date']}</div>
+                              </div>
+                              <div class="small-12 large-6 columns">
+                                   <div class="fs18px mgr5 mgl15 pdr4 pdt8 txtal lh20 pneutre c1">{$k['titre']}</div>
+                              </div>
                          </div>
-                         <div class="small-12 large-6 columns">
-                              <div class="fs18px mgr5 mgl5 pdr4 pdt8 txtal lh20 pneutre c1">{$k['titre']}</div>
+                         <div class="row">
+                              <div class="small-12 columns">
+                                   <div class="fs15px mgr5 mgl10 txtaj lh15 pneutre pdb8 c1">{$k['contenu']}</div>
+                              </div>
                          </div>
-                    </div>
-                    <div class="row">
-                         <div class="small-12 columns">
-                              <div class="fs15px mgr5 mgl5 txtaj lh15 pneutre pdb8 c1">{$k['contenu']}</div>
-                         </div>
-                    </div>
+                    </a>
+                    <div class="row"><div class="small-12 columns"><div class="TraitOrange"></div></div></div>
                {/foreach}
+                <div class="pdt5 pdb5"></div>
           </div>
      </div>
      <div class="small-12 medium-6 columns">
-          <div class="EventBox">
-               {foreach from=$news key=i item=k}
-                    <div class="row">
-                         <div class="small-12 large-6 columns">
-                              <div class="fs18px mgr5 mgl5 pdb8 pdt8 txtal lh20 pneutre c1">{$k['date']}</div>
+          <div class="txtal mgt20 mgb20"><h1><span class="SouligneOrange">{$texte[8]}</span></h1></div>
+          <div class="EventBox" data-equalizer-watch>
+               {foreach from=$actu key=i item=k}
+                    <a href="{$master_url}/news/{$k['id_actu']}">
+                         <div class="row">
+                              <div class="small-12 large-6 columns">
+                                   <div class="fs18px mgr5 mgl15 pdb8 pdt8 txtal lh20 pneutre c1">{$k['date']}</div>
+                              </div>
+                              <div class="small-12 large-6 columns">
+                                   <div class="fs18px mgr5 mgl15 pdr4 pdt8 txtal lh20 pneutre c1">{$k['titre']}</div>
+                              </div>
                          </div>
-                         <div class="small-12 large-6 columns">
-                              <div class="fs18px mgr5 mgl5 pdr4 pdt8 txtal lh20 pneutre c1">{$k['titre']}</div>
+                         <div class="row">
+                              <div class="small-12 columns">
+                                   <div class="fs15px mgr10 mgl10 txtaj lh15 pneutre pdb8 c1">{$k['accroche']}</div>
+                              </div>
                          </div>
-                    </div>
-                    <div class="row">
-                         <div class="small-12 columns">
-                              <div class="fs15px mgr5 mgl5 txtaj lh15 pneutre pdb8 c1">{$k['accroche']}</div>
-                         </div>
-                    </div>
+                    </a>
+                    <div class="row"><div class="small-12 columns"><div class="TraitOrange"></div></div></div>
                {/foreach}
           </div>
      </div>
 </div>
-
-<div class="mgt20 mgb20"></div>
-
-{literal}
-  <script>
-        jQuery(document).ready(function ($) {
-            
-            var jssor_1_SlideoTransitions = [
-              [{b:5500.0,d:3000.0,o:-1.0,r:240.0,e:{r:2.0}}],
-              [{b:-1.0,d:1.0,o:-1.0,c:{x:51.0,t:-51.0}},{b:0.0,d:1000.0,o:1.0,c:{x:-51.0,t:51.0},e:{o:7.0,c:{x:7.0,t:7.0}}}],
-              [{b:-1.0,d:1.0,o:-1.0,sX:9.0,sY:9.0},{b:1000.0,d:1000.0,o:1.0,sX:-9.0,sY:-9.0,e:{sX:2.0,sY:2.0}}],
-              [{b:-1.0,d:1.0,o:-1.0,r:-180.0,sX:9.0,sY:9.0},{b:2000.0,d:1000.0,o:1.0,r:180.0,sX:-9.0,sY:-9.0,e:{r:2.0,sX:2.0,sY:2.0}}],
-              [{b:-1.0,d:1.0,o:-1.0},{b:3000.0,d:2000.0,y:180.0,o:1.0,e:{y:16.0}}],
-              [{b:-1.0,d:1.0,o:-1.0,r:-150.0},{b:7500.0,d:1600.0,o:1.0,r:150.0,e:{r:3.0}}],
-              [{b:10000.0,d:2000.0,x:-379.0,e:{x:7.0}}],
-              [{b:10000.0,d:2000.0,x:-379.0,e:{x:7.0}}],
-              [{b:-1.0,d:1.0,o:-1.0,r:288.0,sX:9.0,sY:9.0},{b:9100.0,d:900.0,x:-1400.0,y:-660.0,o:1.0,r:-288.0,sX:-9.0,sY:-9.0,e:{r:6.0}},{b:10000.0,d:1600.0,x:-200.0,o:-1.0,e:{x:16.0}}]
-            ];
-            
-            var jssor_1_options = {
-              $AutoPlay: true,
-              $SlideDuration: 500,
-              $SlideEasing: $Jease$.$OutQuint,
-              $CaptionSliderOptions: {
-                $Class: $JssorCaptionSlideo$,
-                $Transitions: jssor_1_SlideoTransitions
-              },
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$
-              }
-            };
-            
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-            
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizing
-            function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 1920);
-                    jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-            ScaleSlider();
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-            //responsive code end
-        });
-    </script>
-{/literal}
-
- <style>
-        
-        /* jssor slider bullet navigator skin 05 css */
-        /*
-        .jssorb05 div           (normal)
-        .jssorb05 div:hover     (normal mouseover)
-        .jssorb05 .av           (active)
-        .jssorb05 .av:hover     (active mouseover)
-        .jssorb05 .dn           (mousedown)
-        */
-        .jssorb05 {
-            position: absolute;
-        }
-        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 16px;
-            height: 16px;
-            background: url('img/b05.png') no-repeat;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .jssorb05 div { background-position: -7px -7px; }
-        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
-        .jssorb05 .av { background-position: -67px -7px; }
-        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
-
-        /* jssor slider arrow navigator skin 22 css */
-        /*
-        .jssora22l                  (normal)
-        .jssora22r                  (normal)
-        .jssora22l:hover            (normal mouseover)
-        .jssora22r:hover            (normal mouseover)
-        .jssora22l.jssora22ldn      (mousedown)
-        .jssora22r.jssora22rdn      (mousedown)
-        */
-        .jssora22l, .jssora22r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 40px;
-            height: 58px;
-            cursor: pointer;
-            background: url('img/a22.png') center center no-repeat;
-            overflow: hidden;
-        }
-        .jssora22l { background-position: -10px -31px; }
-        .jssora22r { background-position: -70px -31px; }
-        .jssora22l:hover { background-position: -130px -31px; }
-        .jssora22r:hover { background-position: -190px -31px; }
-        .jssora22l.jssora22ldn { background-position: -250px -31px; }
-        .jssora22r.jssora22rdn { background-position: -310px -31px; }
-        
-                /************* fin style slider ************/
-        
-     .tuto_img {
-          width: 100%;
-          height: 165px;
-          position: relative;
-         /* margin-bottom: 20px;*/
-     }
-     
-     .tuto_img img {
-          width: 100%;
-          height: 100%;
-     }
-     
-     .text_tuto {
-          background-color: rgba(0, 0, 0, 0.65);
-          top: 80%;
-          color: #fff;
-          font-size: 13px;
-          height: 20%;
-          left: 15px;
-          width: 88%;
-          position: absolute;
-          text-align: justify;
-          padding-left: 10px;
-          padding-right: 10px;
-          transition:all 0.4s ease;
-     }
-     
-     .tuto_txt_box:hover .text_tuto {
-          background-color: rgba(0, 0, 0, 0.65);
-          color: #fff;
-          font-size: 13px;
-          height: 100%;
-          left: 15px;
-          line-height: 14px;
-          padding-left: 10px;
-          padding-right: 10px;
-          position: absolute;
-          text-align: justify;
-          top: 0;
-          width: 88%;
-          border-top-right-radius: 15px;
-          border-top-left-radius: 15px;
-          transition:all 0.4s ease;
-     }
-     
-     .hide_preview {
-          display: none;
-     }
-     
-     .tuto_txt_box:hover .hide_preview {
-          display: block;
-     }
-     
-     .tuto_txt_box {
-          border: solid 1px #000;
-          border-top-right-radius: 15px;
-          border-top-left-radius: 15px;
-          overflow: hidden;
-     }
-     
-     .vente_index {
-          background-color: rgba(0, 0, 0, 0.65);
-          top: 80%;
-          color: #fff;
-          font-size: 13px;
-          height: 20%;
-          left: 15px;
-          width: 88%;
-          position: absolute;
-          text-align: justify;
-          padding-left: 10px;
-          padding-right: 10px;
-          transition:all 0.4s ease;
-     }
-     
-     .EventBox {
-          background-color: rgba(0, 0, 0, 0.65); 
-     }
-    </style>
-
 
 {include file="$footer_tpl"}

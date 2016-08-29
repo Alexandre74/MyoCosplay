@@ -1,80 +1,613 @@
 /* style slider */
-
-.jssorb05 {
-    position: absolute;
+/*********************************************/
+/********* Style du site Myo Cosplay *********/
+/*********************************************/
+ body {
+    position: relative;
 }
 
-.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: url('/img/b05.png') no-repeat;
-    overflow: hidden;
-    cursor: pointer;
-}
+/***************************************/
+/******** debut de style header ********/
+/***************************************/
 
-.jssorb05 div {
-    background-position: -7px -7px;
-}
 
-.jssorb05 div:hover, .jssorb05 .av:hover {
-    background-position: -37px -7px;
+  
+  .banrow {
+	max-width: 120rem !important;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+  }
 
-}
+  ul.title-area {
+	line-height: inherit !important;
+  }
 
-.jssorb05 .av {
-    background-position: -67px -7px;
-}
+  .couleurFond {
+	background-color: rgba(0, 0, 0, 0.65) !important;
+  }
 
-.jssorb05 .dn, .jssorb05 .dn:hover {
-    background-position: -97px -7px;
-}
+  a.verrou {
+    cursor: default;
+  }
 
-.jssora22l, .jssora22r {
-    display: block;
-    position: absolute;
-    width: 40px;
-    height: 58px;
-    cursor: pointer;
-    background: url('/img/a22.png') center center no-repeat;
-    overflow: hidden;
-}
+  .bandiv {
+	height: 10%;
+	width: 100%;
+    position: relative;
+  }
 
-.jssora22l {
-    background-position: -10px -31px;
-}
+  .baniere {
+	max-width: 100%;
+	height: auto;
+  
+  }
+  
 
-.jssora22r
-{
-    background-position: -70px -31px;
-}
+  
+  .langHTop div {
+	display: inline-block;
+  }
+  
+  .langHTop a {
+	color: #000000;
+  }
+  
+  .flag {
+	width: 16px;
+	height: 11px;
+	background:url("/img/flags.png") no-repeat
+  }
+  
+  .flag.flag-fr {
+	background-position: -144px -44px
+  }
+  .flag.flag-england {
+	background-position: -240px -33px
+  }
+  
+/***************************************/
+/******** debut de style header ********/
+/***************************************/
 
-.jssora22l:hover {
-    background-position: -130px -31px;
-}
+/*****************************************/
+/********** debut de style index *********/
+/*****************************************/
 
-.jssora22r:hover {
-    background-position: -190px -31px;
-}
+ .tuto_img {
+          width: 100%;
+         /* height: 165px;*/
+          position: relative;
+         /* margin-bottom: 20px;*/
+     }
+     
+     .tuto_img img {
+          width: 100%;
+          height: 100%;
+     }
+     
+     .text_tuto {
+          background-color: rgba(0, 0, 0, 0.65);
+          top: 80%;
+          color: #fff;
+          font-size: 13px;
+          height: 20%;
+          width: 100%;
+          position: absolute;
+          text-align: justify;
+          padding-left: 10px;
+          padding-right: 10px;
+          transition:all 0.4s ease;
+          overflow: hidden;
+     }
+     
+     .tuto_txt_box:hover .text_tuto {
+          height: 100%;
+          line-height: 14px;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          border-top-right-radius: 0px !important;
+          border-top-left-radius: 0px !important;
+          transition:all 0.4s ease;
+          overflow: hidden;
+     }
+     
+     .tuto_txt_box {
+          border: solid 1px #000;
+          border-top-right-radius: 0px;
+          border-top-left-radius: 0px;
+          overflow: hidden;
+          position: relative;
+          height: 165px;
+     }
+     
+     .vente_index {
+          background-color: rgba(0, 0, 0, 0.65);
+          top: 80%;
+          color: #fff;
+          font-size: 13px;
+          height: 20%;
+          width: 100%;
+          position: absolute;
+          text-align: justify;
+          padding-left: 10px;
+          padding-right: 10px;
+          /*transition:all 800ms ease-in-out 0s;*/
+     }
+     
+     .EventBox {
+          background-color: rgba(0, 0, 0, 0.65);
+          border-radius: 10px;
+     }
+     
+     .TraitOrange {
+          height: 2px;
+          background-color: #ff832f;
+          width: 80%;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
+          margin-bottom: 10px;
+     }
+     
+     .SouligneOrange {
+         border-bottom: 1px solid #ff832f;
+     }
+     
+     @media only screen and (max-width: 40em) {
+     
+          .tuto_txt_box {
 
-.jssora22l.jssora22ldn {
-    background-position: -250px -31px;
-}
+               height: 210px;
+          }
+     }
+     
+     @media only screen and (min-width: 65.063em) {
+          .top-bar {
+               background: #333333;
+               overflow: visible;
+          }
+     }
+/**************************************/
+/********* fin de style index *********/
+/**************************************/
 
-.jssora22r.jssora22rdn {
-    background-position: -310px -31px;
+.HideMe {
+	display: none !important;
 }
 
 .btn_blanc {
 	color:#4d544c;
 	background:#fff;
-	width:97%;
+	width:27%;
 	text-align: center;
 	font-weight: bold;
-	font-size:20px;
+	font-size:15px;
 	line-height:40px;
 	cursor:pointer;
-	position:relative
+	position:relative;
+	padding-top: inherit;
+	padding-bottom: inherit;
+    border: none;
+}
+
+.btn_blanc:hover {
+	background:#ff832f;
+}
+
+/* style pour taille small */
+@media only screen and (max-width: 40em) {
+
+   .btn_blanc {
+       width:100%;
+       cursor:pointer;
+       position:relative;       
+   }
+}
+
+/* style pour taille medium */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+         
+   .btn_blanc {
+       width:37%;
+       cursor:pointer;
+       position:relative;       
+   }
+   
 }
 
 /* fin stile slider */
+
+/* debut style page index */
+
+
+   .tuto_img {
+          width: 100%;
+         /* height: 165px;*/
+          position: relative;
+         /* margin-bottom: 20px;*/
+     }
+     
+     .tuto_img img {
+          width: 100%;
+          height: 100%;
+     }
+     
+     .text_tuto {
+          background-color: rgba(0, 0, 0, 0.65);
+          top: 80%;
+          color: #fff;
+          font-size: 13px;
+          height: 20%;
+          width: 100%;
+          position: absolute;
+          text-align: justify;
+          padding-left: 10px;
+          padding-right: 10px;
+          transition:all 0.4s ease;
+          overflow: hidden;
+     }
+     
+     .tuto_txt_box:hover .text_tuto {
+          height: 100%;
+          line-height: 14px;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          transition:all 0.4s ease;
+          overflow: hidden;
+     }
+     
+     .tuto_txt_box {
+          border: solid 1px #000;
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          overflow: hidden;
+          position: relative;
+          height: 165px;
+     }
+     
+     .vente_index {
+          background-color: rgba(0, 0, 0, 0.65);
+          top: 80%;
+          color: #fff;
+          font-size: 13px;
+          height: 20%;
+          width: 100%;
+          position: absolute;
+          text-align: justify;
+          padding-left: 10px;
+          padding-right: 10px;
+          /*transition:all 800ms ease-in-out 0s;*/
+     }
+     
+     .EventBox {
+          background-color: rgba(0, 0, 0, 0.65);
+     }
+     
+     .TraitOrange {
+          height: 2px;
+          background-color: #ff832f;
+          width: 80%;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 8px;
+          margin-bottom: 8px;
+     }
+     
+/**************************************/
+/************ style footer ************/
+/**************************************/
+
+  .refcolor a {
+	color: #0F131F !important;
+  }
+  
+  .refcolor a:hover {
+	color: #0F131F !important;
+  }
+  
+  .refcolor a:focus {
+	color: #0F131F !important;
+  }
+
+
+
+
+/***************************************/
+/*************** Autre *****************/
+/***************************************/
+@media only screen and (max-width: 40em) {
+         .espaceMobile {
+              margin-top: 10px;
+              margin-bottom: 10px;
+         }
+}
+
+
+
+
+
+/************************************/
+/********* style test popup *********/
+/************************************/
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+button {
+    border: 3px solid #FFF;
+    padding: 0.6em 1.2em;
+    background: transparent;
+    color: #FFF;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px 2px;
+    border-radius: 2px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+ 
+button:hover {
+    background: #FFF;
+    color: #ff832f;
+}
+ 
+a.logo {
+    display: block;
+    width: 182px;
+    margin: 0 auto;
+}
+ 
+p.intro {
+    font-family: 'Lato', sans-serif;
+    color:#fff;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 23px;
+    margin: 0 auto 50px;
+}
+ 
+.container {
+    background: url("/img/blur.jpg") no-repeat center top !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 1440px;
+    text-align: center;
+    padding: 5%;
+}
+ 
+.content {
+    max-width: 1300px;
+    width: 80%;
+    margin: 0 auto;
+}
+ 
+.popup-button {
+    margin-bottom: 60px;
+}
+ 
+img {
+    max-width: 100%;
+}
+ 
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 1200px;
+    min-width: 320px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    background: #4e2526;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+ 
+.show {
+    visibility: visible;
+}
+ 
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+ 
+.show ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+ 
+.popup-content {
+    color: #fff;
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 6% 10%;
+}
+ 
+.popup-content h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 3.4em;
+    font-weight: 300;
+    position: relative;
+}
+ 
+.popup-content h3:before {
+    position: absolute;
+    width: 47px;
+    height: 38px;
+    content: "";
+    top: 18px;
+    left: 0px;
+}
+ 
+.popup-content .para {
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+ 
+.popup-content > div {
+    padding: 0px;
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.15em;
+}
+ 
+.popup-content > div p {
+    margin: 0;
+    padding: 10px 0;
+}
+ 
+.popup-content > div ul {
+    margin: 0;
+    padding: 0 0 30px 20px;
+}
+ 
+.popup-content > div ul li {
+    padding: 5px 0;
+}
+ 
+.popup-content button {
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+ 
+.close {
+    background: url("/img/close.png") no-repeat;
+    height: 49px;
+    width: 49px;
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+ 
+.close:hover {
+    opacity: 0.2;
+}
+ 
+.submit {
+    background: #ff832f;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    opacity: 1;
+    cursor: pointer;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+ 
+.submit:hover {
+    opacity: 0.5;
+}
+ 
+ 
+/* Effet blur */
+.show.blur-effect ~ .overlay {
+    background: rgba(0,0,0,0.4);
+}
+ 
+.show.blur-effect ~ .container, .show.blur-effect ~ .bgall{
+    -webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
+}
+ 
+.blur-effect .popup-content {
+    -webkit-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+    -ms-transform: translateY(-5%);
+    transform: translateY(-5%);
+    opacity: 0;
+}
+ 
+.show.blur-effect ~ .container,
+.blur-effect .popup-content, .show.blur-effect ~ .bgall {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+ 
+.show.blur-effect .popup-content {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+ 
+/* Media queries */
+ 
+@media(max-width: 1230px) {
+ 
+    .popup-content h3:before {
+        display: none;
+    }   
+ 
+}
+ 
+@media(max-width: 680px) {
+ 
+    h1 {
+        font-size: 42px;
+    }
+ 
+}
+ 
+@media(max-width: 480px) {
+ 
+    h1 {
+        font-size: 32px;
+    }
+ 
+    .popup-content h3 {
+        font-size: 2em;
+    }
+ 
+    .close {
+        right: 1px;
+        top: 1px;
+    }
+ 
+}
