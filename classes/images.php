@@ -25,30 +25,19 @@
 				
 				$row2 = $res2->fetch_array(MYSQLI_ASSOC);
 				
-				$x1 = htmlspecialchars($row2["FR_titre"]);
-				$x2 = htmlspecialchars($row2[$_SESSION["lang"]."_titre"]);
+				$titre = 			htmlspecialchars($row2["FR_titre"]);
+				$accroche =			htmlspecialchars($row2["FR_accroche"]);
+				$lien = 			htmlspecialchars($row2["FR_lien"]);
+				$cover = 			htmlspecialchars($row2["FR_cover"]);
 				
-				$y1 = htmlspecialchars($row2["FR_accroche"]);
-				$y2 = htmlspecialchars($row2[$_SESSION["lang"]."_accroche"]);
-				
-				$z1 = htmlspecialchars($row2["FR_lien"]);
-				$z2 = htmlspecialchars($row2[$_SESSION["lang"]."_lien"]);
-				
-				$g1 = htmlspecialchars($row2["FR_cover"]);
-				$g2 = htmlspecialchars($row2[$_SESSION["lang"]."_cover"]);
-				
-				$titre = 	$x1;
-				$accroche = $y1;
-				$lien = 	$z1;
-				$cover = 	$g1;
-				
-				if ($x2 != "") {
-					$titre = 	$x2;
-					$accroche = $y2;
-					$lien = 	$z2;
-					$cover = 	$g2;
-				}	
-				
+				if (isset($_SESSION["lang"]))
+				{
+					$titre = 		htmlspecialchars($row2[$_SESSION["lang"]."_titre"]);
+					$accroche = 	htmlspecialchars($row2[$_SESSION["lang"]."_accroche"]);
+					$lien = 		htmlspecialchars($row2[$_SESSION["lang"]."_lien"]);
+					$cover = 		htmlspecialchars($row2[$_SESSION["lang"]."_cover"]);
+				}
+
 				$retour[$id]["titre"]	= 	html_entity_decode($titre);
 				$retour[$id]["accroche"] = 	html_entity_decode($accroche);
 				$retour[$id]["lien"] = 		html_entity_decode($lien);

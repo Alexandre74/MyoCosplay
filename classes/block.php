@@ -25,25 +25,22 @@
 				
 				$row2 = $res2->fetch_array(MYSQLI_ASSOC);
 				
-				$retour[$id]["publie"] =    $row2["publie"];
-				$retour[$id]["date"] =      $row2["date"];
-				$retour[$id]["id_cat"] =    $row2["id_cat"];
+				//$retour[$id]["publie"] =    $row2["publie"];
+				//$retour[$id]["date"] =      $row2["date"];
+				//$retour[$id]["id_cat"] =    $row2["id_cat"];
 				
-				$x1 = htmlspecialchars($row2["FR_titre"]);
-				$x2 = htmlspecialchars($row2[$_SESSION["lang"]."_titre"]);
-				
-				$y1 = htmlspecialchars($row2["FR_contenu"]);
-				$y2 = htmlspecialchars($row2[$_SESSION["lang"]."_contenu"]);
-				
-				$x = $x1;
-				$y = $y1;
-				
-				if ($x2 != "") {
-					$x = $x2;
-					$y = $y2;
+				if (isset($_SESSION["lang"]))
+				{
+					$x = htmlspecialchars($row2[$_SESSION["lang"]."_titre"]);
+					$y = htmlspecialchars($row2[$_SESSION["lang"]."_contenu"]);
+				}
+				else
+				{
+					$x = htmlspecialchars($row2["FR_titre"]);
+					$y = htmlspecialchars($row2["FR_contenu"]);
 				}
 				
-				$requete3 = "SELECT id FROM url ORDER BY id";
+				/*$requete3 = "SELECT id FROM url ORDER BY id";
 				$res3 = $mysqli->query($requete3);
 				
 				while($row3 = $res3->fetch_array(MYSQLI_ASSOC)) {
@@ -66,10 +63,10 @@
 					$the_url	= html_entity_decode($xa);
 					
 					$y = str_replace("#url$id3#","$the_url",$y);
-				}	
+				}	*/
 				
-				$retour[$id]["titre"]	= html_entity_decode($x);
-				$retour[$id]["contenu"] = html_entity_decode($y);
+				$retour[$id]["titre"]	= html_entity_decode($x);
+				$retour[$id]["contenu"] = html_entity_decode($y);
 			}
 			
 			return $retour;

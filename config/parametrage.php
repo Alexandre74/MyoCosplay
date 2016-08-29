@@ -5,7 +5,7 @@
 	*********************************************************************/
 	
 	//*** url du site, avec http://  et sans le / final ***
-	$master_url = "http://myocosplay.eu";
+	$master_url = "https://myocosplay.eu";
 
 	//*** nom du repertoire du theme utilisé ***
 	$the_theme = "webi";

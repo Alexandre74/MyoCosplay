@@ -10,6 +10,14 @@
     include("./classes/vente_cos.php");
     $vente_cos = new vente_cos;
     $smarty->assign("vente_cos", $vente_cos->last_vente());
+    
+    include("./classes/evenement.php");
+    $event = new evenement;
+    $smarty->assign("event", $event->recup_event());
+    
+    include("./classes/actu.php");
+    $actu = new actu;
+    $smarty->assign("actu", $actu->recup_actu());
 
     $smarty->display("themes/$the_theme/index.tpl");
 ?>

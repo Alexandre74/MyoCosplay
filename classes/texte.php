@@ -20,14 +20,12 @@
 			while($row = $res->fetch_array(MYSQLI_ASSOC)) {
 				$id = $row["id"];
 
-				$x1 = htmlspecialchars($row["FR_txt"]);
-				$x2 = htmlspecialchars($row[$_SESSION["lang"]."_txt"]);
+				$x = htmlspecialchars($row["FR_txt"]);
 				
-				$x = $x1;
-				
-				if ($x2 != "") {
-					$x = $x2;
-				}	
+				if (isset($_SESSION["lang"]))
+				{
+					$x = htmlspecialchars($row[$_SESSION["lang"]."_txt"]);
+				}				
 				
 				$retour[$id] = html_entity_decode($x);
 			}
